@@ -1,0 +1,82 @@
+.container>*{
+    border: 2px solid gold;
+    padding: 30px;
+    background-color: blanchedalmond;
+}
+header{
+    grid-area: header;
+    text-align: center;
+}
+nav {
+    grid-area: navbar;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+}
+main {
+    grid-area: main;
+    text-align: center;
+}
+#sidebar{
+    grid-area: sidebar;
+    text-align: center;
+}
+#advertise{
+    grid-area: advertise;
+    text-align: center;
+}
+footer{
+    grid-area: footer;
+    text-align: center;
+}
+.container{
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    "header header header header "
+    "navbar main main sidebar" 
+    "navbar main main advertise"
+    "footer footer footer footer"
+    
+    ;
+}
+@media screen and (max-width:576px) {
+    .container{
+        display: grid;
+        gap: 10px;
+        /* grid-template-areas: "header header header header"
+        "navbar navbar navbar navbar"
+        "main main main main "
+        "main main main main "       
+        "sidebar sidebar sidebar sidebar"
+        "advertise advertise advertise advertise"
+        "footer footer footer footer" */
+        grid-template-areas: 
+        "header"
+        "navbar"
+        "main"
+        "sidebar"
+        "advertise"
+        "footer"
+
+        ;
+    }
+    
+}
+@media screen and (min-width:577px) and (max-width:920px){
+    .container{
+        display: grid;
+        gap: 15px;
+        grid-template-areas: 
+        "header header header header"
+        "navbar navbar navbar navbar"
+        "sidebar main main main"
+        "advertise footer footer footer"
+        ;
+
+    }
+}
